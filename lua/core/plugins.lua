@@ -3,7 +3,7 @@ if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
         "git", "clone", "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git", "--branch=stable", -- latest stable release
-        lazypath
+	lazypath
     })
 end
 vim.opt.rtp:prepend(lazypath)
@@ -50,5 +50,8 @@ require("lazy").setup({
     { 'hrsh7th/vim-vsnip' },
     {'hrsh7th/vim-vsnip-integ'},
     {'folke/tokyonight.nvim'},
-    { "catppuccin/nvim", name = "catppuccin" }
+    {"catppuccin/nvim", name = "catppuccin"},
+    {'Pocco81/auto-save.nvim'},
+    {'tpope/vim-surround'},
+    {'max397574/better-escape.nvim'}, -- remove lags from j
 });

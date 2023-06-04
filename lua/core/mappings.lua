@@ -28,3 +28,6 @@ vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 -- Terminal
 vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
 vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
+
+-- Russian nvim layout
+vim.api.nvim_command('set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz')

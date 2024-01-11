@@ -1,59 +1,27 @@
-local function default_header()
-    return {
-        '', '', '',
-        '██████╗ ██╗   ██╗██████╗ ██████╗ ██╗     ███████╗',
-        '██╔══██╗██║   ██║██╔══██╗██╔══██╗██║     ██╔════╝',
-        '██████╔╝██║   ██║██████╔╝██████╔╝██║     █████╗  ',
-        '██╔═══╝ ██║   ██║██╔══██╗██╔═══╝ ██║     ██╔══╝  ',
-        '██║     ╚██████╔╝██║  ██║██║     ███████╗███████╗',
-        '╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝╚══════╝',
-        '', '', ''
-    }
-end
-
-require('dashboard').setup {
-    theme = 'doom',
+require('dashboard').setup ({
+    theme = 'hyper',
     config = {
-        header = default_header(),
-        center = {
+        week_header = {
+        enable = true,
+    },
+        shortcut = {
+            { 
+                icon = '󰊳  ',
+                icon_hl = '@variable',
+                desc = 'Update Plugin', 
+                group = '@property', 
+                action = 'Lazy update', 
+                key = 'u' 
+            },
             {
-                icon = '󰙅 ',
-                icon_hl = 'Title',
-                desc = 'Open tree',
-                desc_hl = 'String',
-                key = 'e',
-                keymap = 'SPC e',
-                key_hl = 'Number',
-                action = ':Neotree float'
-            }, {
-                icon = '󰈞 ',
-                icon_hl = 'Title',
-                desc = 'Find files',
-                desc_hl = 'String',
+                icon = '  ',
+                icon_hl = '@variable',
+                desc = 'Find Files',
+                group = 'Label',
+                action = 'Telescope find_files',
                 key = 'f',
-                keymap = 'SPC f f',
-                key_hl = 'Number',
-                action = ':Telescope find_files'
-            }, {
-                icon = ' ',
-                icon_hl = 'Title',
-                desc = 'Find text',
-                desc_hl = 'String',
-                key = 'w',
-                keymap = 'SPC f w',
-                key_hl = 'Number',
-                action = ':Telescope live_grep'
-            }, {
-                icon = ' ',
-                icon_hl = 'Title',
-                desc = 'Git Braches',
-                desc_hl = 'String',
-                key = 'b',
-                keymap = 'SPC g b',
-                key_hl = 'Number',
-                action = ':Telescope git_branches'
-            }
+            },
+        },
+    },
+})
 
-        }
-    }
-}
